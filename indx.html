@@ -442,41 +442,39 @@
 		<div id="deityPane">
 			<button id="buyUpgrade">Buy Upgrade</button>
 
-<!-- CHOICE POPUP -->
+			<!-- CHOICE POPUP -->
 <div id="choiceModal" class="modal hidden">
   <div class="modal-content">
-    <h2>Choose Your Path</h2>
+    <h2>Choose a Path</h2>
 
     <div class="choices">
-      <div class="choice" data-tree="offense">
-        <img src="offense.png">
-        <h3>Offense</h3>
-        <p>Increase damage and critical hits.</p>
-      </div>
+      <div class="choice" data-tree="cat">
+  <h3>Cat God</h3>
+</div>
 
-      <div class="choice" data-tree="defense">
-        <img src="defense.png">
-        <h3>Defense</h3>
-        <p>Boost health and damage reduction.</p>
-      </div>
+<div class="choice" data-tree="dead">
+  <h3>God of the Dead</h3>
+</div>
 
-      <div class="choice" data-tree="utility">
-        <img src="utility.png">
-        <h3>Utility</h3>
-        <p>Movement speed and cooldown reduction.</p>
-      </div>
+<div class="choice" data-tree="sun">
+  <h3>Sun God</h3>
+</div>
+
     </div>
   </div>
 </div>
 
-<!-- SKILL TREE -->
-<div id="skillTree" class="hidden">
-  <h2 id="treeTitle"></h2>
+<!-- SKILL TREE OVERLAY -->
+<div id="skillOverlay" class="overlay hidden">
+  <div id="panel">
+    Credits: <span id="wallet"></span>
+  </div>
 
-  <div class="tree">
-    <div class="node">Skill 1</div>
-    <div class="node">Skill 2</div>
-    <div class="node">Skill 3</div>
+  <div id="skilltree"></div>
+
+  <div class="tree-actions">
+    <button id="backBtn">Back</button>
+    <button id="confirmBtn">Confirm</button>
   </div>
 </div>
 		</div>
@@ -973,16 +971,7 @@
         </table>
 	</div>
 	<div id="pantheonContainer">
-		<h3>Pantheon</h3>
-		<table id="activeDeity">
-			<tr id="deity1">
-				<td><strong><span id="deity1Name">No deity</span></strong><span id="deity1Type" class="deityType"></span></td>
-				<td>Devotion: <span id="devotion1">0</span></td>
-				<td class="removeDeity"><button class="removeDeity" onmousedown="removeDeity(deity1)">X</button></td>
-			</tr>
-		</table>
-		<br />
-		<table id="oldDeities"><tr><td></td></tr></table>
+		
 	</div>
 	<div id="permaUpgradeContainer">
 		<h3>Pantheon Upgrades</h3>
@@ -1048,6 +1037,7 @@
 	<div style="clear:both;"><br /></div>
 </div>
 
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="skilltree.js"></script>
 <script type="text/javascript" src="LZString.js"></script>

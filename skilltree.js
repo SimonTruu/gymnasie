@@ -221,9 +221,9 @@
     dataset.nodes.update({
       id: node.id,
       title: `
-        <b>${node.name}</b><br>
-        Cost: ${node.value}<br>
-        <span style="color:#33C3F0">${node.stat}</span>
+        ${node.name}
+        Cost: ${node.value}
+       ${node.stat}
       `
     });
   });
