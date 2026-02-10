@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill Tree System</title>
+  <link rel="stylesheet" href="skilltree.css">
+</head>
+<body>
+
+<!-- GAME (whatever your game is) -->
+<div id="game">
+  <button id="buyUpgrade">Buy Upgrade</button>
+</div>
+
+<!-- CHOICE POPUP -->
+<div id="choiceModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Choose a Path</h2>
+
+    <div class="choices">
+      <div class="choice" data-tree="cat">
+  <h3>Cat God</h3>
+</div>
+
+<div class="choice" data-tree="dead">
+  <h3>God of the Dead</h3>
+</div>
+
+<div class="choice" data-tree="sun">
+  <h3>Sun God</h3>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SKILL TREE OVERLAY -->
+<div id="skillOverlay" class="overlay hidden">
+  <div id="panel">
+    Credits: <span id="wallet"></span>
+  </div>
+
+  <div id="skilltree"></div>
+
+  <div class="tree-actions">
+    <button id="backBtn">Back</button>
+    <button id="confirmBtn">Confirm</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script src="skilltree.js"></script>
+</body>
+
+</html>
